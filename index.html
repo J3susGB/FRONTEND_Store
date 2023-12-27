@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> FrontEnd Store</title>
+        <link rel="icon" href="./img/logo.png" type="image/png"> <!--Icono de la pestaña del navegador-->
+        <link rel="stylesheet" href="css/normalize.css"> <!--Enlazar archivo normalize para normalizar vista entre navegadores-->
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> <!--Para linkar tipo letra de google font-->
+        <link rel="stylesheet" href="css/style.css"> <!--Enlazar archivo estilos propios-->
+    </head>
+    <body>
+        <header class="header"> <!--Se establece header donde irá la cabecera de la web-->
+            <a href="index.html"> <!--Se establece un enlace y dentro, una imagen, que será el logo de la web, para que cuando se pulse,
+                                    nos lleve a la página principal/home de la página-->
+                <img class="header__logo" src="./img/logo.png" alt="Logotipo">
+            </a>
+        </header>
+
+        <nav class="navegacion"> <!--Se crea barra de navegación-->
+            <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a> <!--Botón de navegación Tienda, que al puslarlo, nos llevará a la sección tienda de la web-->
+            <a class="navegacion__enlace" href="nosotros.html">Nosotros</a> <!--Botón de navegación Nosotros, que al pulsarlo, nos llevará a la sección nosotros de la web-->
+        </nav>
+
+        <main class="contenedor"> <!--Asigno al main la clase contendor creada anteriormente-->
+            <h1>Nuestros productos</h1>
+
+            <div class="grid"> <!--creo div para usarlo como contenedor del grid-->
+                <!--creo varios div para usarlos como contenedores de los productos dentro del grid-->
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/1.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">VueJS</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/2.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">AngularJS</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/3.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">ReactJS</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/4.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">Redux</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/5.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">Node.js</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/6.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">SASS</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/7.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">HTML5</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/8.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">GitHub</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/9.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">BulmaCSS</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/10.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">TypeScript</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/11.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">Drupal</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/12.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">JavaScript</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/13.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">GraphQL</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <div class="producto"> 
+                    <!--Creo enlace con imagen dentro para cada produto, y al pulsarlo, nos llevará a la página producto.html-->
+                    <a href="producto.html">
+                        <img class="producto__imagen" src="img/14.jpg" alt="imagen camiseta">
+                        <div class="producto__informacion"> <!--creo div para usarlo como contenedor del nombre y precio del produnto-->
+                            <p class="producto__nombre">WordPress</p>
+                            <p class="producto__precio">25€</p>
+                        </div>
+                    </a>
+                </div> <!--fin .producto-->
+
+                <!--El siguiente código, hace referencia a las dos imágenes que son más grandes, la imagen de varias camisetas 
+                dobladas (clase grafico--camisas) y la imagen de la camiseta node (clase grafico--node):-->
+                <div class="grafico grafico--camisas"></div> <!--La imagen la voy a introducir con css-->
+                <div class="grafico grafico--node"></div> <!--La imagen la voy a introducir con css-->
+
+            </div> <!--fin .grid-->
+        </main> <!--fin .contenedor-->
+
+        <footer class="footer">
+            <p class="footer__texto">Front End Store - Todos los derechos reservados 2024.</p>
+        </footer>
+    </body>
+</html>

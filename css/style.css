@@ -1,0 +1,256 @@
+:root {
+    /*PALETA DE COLORES*/
+    --primario: #9c27b0;
+    --primarioOscuro: #89119D;
+    --secundario: #FFCE00;
+    --secundarioOscuro: rgb(233,187,2);
+    --blanco: #FFF;
+    --negro: #000;
+
+    /*TIPO DE LETRA*/
+    --fuentePrincipal: 'Staatliches', sans-serif; /* Tipo de letra de Google Font*/
+}
+
+/*BOX MODEL*/
+html { /*Por defecto para web responsive (1 rem = 10px)*/ 
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after { /*Por defecto para web responsive (1 rem = 10px)*/  
+    box-sizing: inherit;
+}
+
+/*Globales*/
+body {
+
+    background-color: var(--primario) ; /*Color de fondo del body*/ 
+    font-size: 1.6rem; /*Tamaño general de la letra del body*/ 
+    line-height: 1.5; /*Interlineado en todo el body*/ 
+}
+p {
+    font-size: 1.8rem; /*Tamaño de letra de los párrafos*/ 
+    font-family: Arial, Helvetica, sans-serif; /*Tipo de letra de los párrafos*/ 
+    color: var(--blanco);
+}
+a {
+    text-decoration: none; /*Elimino el subrayado que aparece por defecto en los enlaces*/
+}
+img {
+    /*max-width: 100%; /*Las imágenes tendrán un tamaño del 100% --> Hasta el diseño de la página producto, se usó, pero luego, se anula este atributo*/
+    width: 100%; /*Se usa por defecto para todas las imágenes, anulando todo el código donde iba incluido este atributo en las imágenes (lo dejo comentado
+    para no perderme*/
+}
+.contenedor {
+    max-width: 120rem; /*Doy al contenedor una anchura máxima de 1200px*/
+    margin: 0 auto; /*método para centrarlo todo*/
+}
+h1,h2,h3 { /*Selecciono los 3 a la ver porque todos tendrán el mismo color, misma fuenta y estarán alineados al centro*/
+    text-align: center;
+    color: var(--secundario);
+    font-family: var(--fuentePrincipal);
+}
+h1{
+    font-size: 4rem; /*Tamaño específico para los h1*/
+}
+h2{
+    font-size: 3.2em; /*Tamaño específico para los h2*/
+}
+h3{
+    font-size: 2.4rem; /*Tamaño específico para los h3*/
+}
+
+/*header*/
+.header {
+    display:flex; /*habilito display flex para alinear (recordar que por defecto, el flex direction es rows*/
+    justify-content: center; /*Alineo a al centro*/
+}
+.header__logo { /*Selector del logo para maquetación*/
+    margin: 3rem 0; /*Margen arriba y abajo de 3 rem y 0 a izquierda y derecha*/
+}
+
+/*Footer*/
+.footer { /*Selector del footer para maquetación*/
+    background-color: var(--primarioOscuro); /*Color de fondo del footer*/
+    padding: 1rem 0; /*padding arrbia y abajo de 1rem y 0 a izquierda y derecha*/
+    margin-top: 2rem; /*Margen en la parte superior*/
+}
+.footer__texto { /*Selector del texto del footer para maquetación*/
+    font-family: var(--fuentePrincipal); /*Selecciono tipo de letra*/
+    text-align: center; /*Texto del footer centrado*/
+}
+
+/*Navegación*/
+.navegacion { /*Selector de la navegación para maquetación*/
+    background-color: var(--primarioOscuro); /*Establezco color de la barra de navegación*/
+    padding: 1rem 0; /*Padding de 1 rem arriba y abajo y 0 a izquierda y derecha*/
+    display:flex; /*habilito display flex para alinear (recordar que por defecto, el flex direction es rows*/
+    justify-content: center; /*Alineo a al centro*/
+    gap: 2rem; /*Separación entre los enlaces que haya en la barra de navegación. Es forma nueva.*/
+}
+.navegacion__enlace { /*Selector de los enlaces de la navegación para maquetación*/
+    font-family: var(--fuentePrincipal); /*Selecciono tipo de letra*/
+    color: var(--blanco); /*Establezco color*/
+    font-size: 3rem; /*Tamaño específico de los enlaces*/
+} 
+.navegacion__enlace--activo, /*Selector de los enlaces de la navegación para cuando nos encontremos en la página a la que hace referencia*/
+.navegacion__enlace:hover {  /*Selector de los enlaces de la navegación para evento hover*/ 
+    color: var(--secundario); /*Establezco color*/
+}
+
+/*Grid*/
+/*Se programa para pantallas pequeñas, y luego con los media queries, se modifica*/
+.grid { /*Selector del grid para maquetación*/
+    display: grid; /*habilito display grid para que todo el contenido se posicione en una cuadrícula*/
+    grid-template-columns: repeat(2, 1fr); /*Con esto, hago que haya dos columnas en el grid de igual tamaño*/
+    gap: 2rem; /*separación entre columnas y filas*/
+} 
+@media (min-width: 768px) { /*Esto se aplicará una vez la pantalla supere los 768 px (aprox, el tamaño de una tablet*/
+    .grid {
+        grid-template-columns: repeat(3, 1fr); /*Con esto, hago que haya tres columnas en el grid de igual tamaño*/
+    }
+}
+
+/*Productos*/
+.producto {
+    background-color: var(--primarioOscuro); /*Color de fondo de la caja de los productos*/
+    padding: 1rem; /*Dará la apariencia de que la imagen de los productos está como incrustada*/
+}
+/*.producto__imagen {
+    width: 100%; /*Con esto. obligo a la imagen a que llene todo el espacio que pueda, teniéndo el cuenta el padding. La apariencia será la 
+                  de estar centrado dentro de la caja producto
+}*/
+.producto__nombre {
+    font-size: 4rem; /*Cambio tamaño al nombre de cada producto*/
+}
+.producto__precio {
+    font-size: 2.8rem; /*Cambio tamaño al precio de cada producto*/
+    color: var(--secundario); /*Cambio color al precio*/
+}
+.producto__nombre, /*Selector de ambas clases para atributos comunes*/
+.producto__precio {
+    font-family: var(--fuentePrincipal); /*Cambio tipo de letra*/
+    margin: 1rem 0; /*Traen los párrafos un margen por defecto que le quito, dándole 1 rem arriba y abajo y cero a izquierda y derecha*/
+    text-align: center; /*Alienado al centro con respecto a la imagen*/
+    line-height: 1.2; /*Modifico el interlineado por defecto que declaré anteriormente en el body, para este apartado*/ 
+}
+
+/*Gráficos*/
+.grafico { /*Selector de la clase gráfico para maquetación*/
+    min-height: 30rem; /*Le doy altura mínima a la caja contenedora de las dos imágenes*/
+    background-repeat: no-repeat; /*Evitamos que las imágenes se repitan (viene el repeat activo por defecto*/
+    /*Al activar el no.repeat anterior, la imagen deja de repetirse, pero se queda más pequeña y lo que busco es que tenga el tamaño
+    asignado a la caja, por lo que le aplico el cover y se expandirá ocupando todo el espacio disponible en la caja:*/
+    background-size: cover;
+    grid-column: 1 / 3; /*Posiciona las imagenes en las columnas que van de la 1 hacia la 3*/
+}
+.grafico--camisas { /*Selector de la primera imagen para maquetación*/
+    grid-row: 2 / 3; /*Posiciona la imagen en la fila 2 */
+    background-image: url(../img/grafico1.jpg); /*Se introduce la imagen (recordar que por defecto, la imagen se repite*/
+
+}
+.grafico--node { /*Selector de la segunda imagen para maquetación*/
+    background-image: url(../img/grafico2.jpg); /*Se introduce la imagen (recordar que por defecto, la imagen se repite*/
+    grid-row: 8 / 9; /*Posiciona la imagen en la fila 8 */
+}
+@media (min-width: 768px) { /*Lo pongo dentro de un mq para controlar el desbordamiento y la apariencia cuando la pantalla supere los 768px)*/
+    .grafico--node { 
+        grid-row: 5 / 6; /*Posiciona la imagen en la fila que va de la 5 */
+        grid-column: 2 / 4; /*Posiciona la imagen en la columna que va de la 2 hacia la 4*/
+    }
+}
+
+/*Nosotros*/
+.nosotros { /*Selector de la clase nosotros, que será el contenedor principal de esta página (recordatorio de que se programa para pantalla pequeña*/
+    display: grid; /*habilito display grid para que todo el contenido se posicione en una cuadrícula*/
+    grid-template-rows: repeat(2, auto); /*Copn esto se consigue que en el grid haya dos filas, y se pone auto para que no de un tamaño fijo y se adapte*/
+    padding: 0 2rem; /*Esto no viene en el proyecto, pero lo añado yo, para cuando la pantalla sea pequeña, no se quede pegado el contenido al borde, sino que
+                      se mete un poco hacia dentro, dejando más espacio*/
+}
+@media (min-width: 768px) { /*Con este mq adapto el diseño a pantallas superiores a 768px*/
+    .nosotros {
+        grid-template-columns: repeat(2, 1fr); /*Con esto, hago que haya dos columnas en el grid de igual tamaño*/
+        column-gap: 2rem; /*Separación entre columnas (solo columnas)*/
+    }
+}
+.nosotros__imagen {
+    grid-row: 1 / 2; /*Posiciono la imagen en la fila 1*/
+    /*width: 100%; /*Con esto. obligo a la imagen a que llene todo el espacio que pueda, teniéndo el cuenta el padding, margen, etc. La apariencia será la 
+                  de estar centrado dentro de la caja producto*/
+}
+@media (min-width: 768px) { /*Con este mq adapto el diseño a pantallas superiores a 768px*/
+    .nosotros__imagen {
+        grid-column: 2 / 3; /*Coloca la imagen en la columna que va de la 2 a la 3 del grid*/
+    }
+}
+
+/*Bloques*/
+.bloques { /*Selector de la clase bloques, que será el contenedor principal donde irá posicionado el resto del contenido*/
+    display: grid; /*habilito display grid para que todo el contenido se posicione en una cuadrícula*/
+    grid-template-columns: repeat(2, 1fr); /*En pantalla pequeña, habrá dos columnas del mismo tamaño cada una*/
+    gap: 2rem; /*separación entre columnas y filas (todas las direcciones*/
+    padding: 0 2rem; /*Esto no viene en el proyecto, pero lo añado yo, para cuando la pantalla sea pequeña, no se quede pegado el contenido al borde, sino que
+                      se mete un poco hacia dentro, dejando más espacio*/
+}
+@media (min-width: 768px) { /*Con este mq adapto el diseño a pantallas superiores a 768px*/
+    .bloques {
+        grid-template-columns: repeat(4, 1fr); /*En pantalla superior a 768px, habrá cuatro columnas del mismo tamaño cada una*/
+    }
+}
+.bloque {
+    text-align: center; /*Alieno al centro todo el contenido de cada bloque*/
+}
+/*.bloque__imagen {
+    width: 100%; /*Aplico 100% de anchura a la imagen para que se vean más grandes en pantalla pequeña
+}*/
+.bloque__titulo {
+    margin: 0; /*Le quito los márgenes a los títulos, y aprovecho el margen por defecto que ya traen las imágenes para la separación entre imagen y título*/
+}
+
+/*Pagina del producto*/
+@media (min-width: 768px) { /*Con este mq adapto el diseño a pantallas superiores a 768px*/
+    .camisa {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /*En pantalla superior a 768px, habrá dos columnas del mismo tamaño cada una*/
+        column-gap: 2rem; /*Separación entre columnas (solo columnas)*/
+    }
+}
+@media (min-width: 768px) {
+    .formulario, /*Selector que yo añado por gusto mío para el padding*/
+    .formulario__campo,
+    .camisa {
+        padding: 0 2rem; /*Esto no viene en el proyecto, pero lo añado yo, para cuando la pantalla sea pequeña, no se quede pegado el contenido al borde, sino que
+                          se mete un poco hacia dentro, dejando más espacio*/
+    }
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*Habrá dos columnas del mismo tamaño cada una*/
+    gap: 2rem; /*separación entre columnas y filas (todas las direcciones*/
+    
+    
+}
+.formulario__campo {
+    border: 1rem solid var(--primarioOscuro); /*Cambio anchura, estilo y color al borde de los campos*/
+    background-color: var(--primario); /*Pongo el fondo de los campos transparente, para que adopte el color del fondo de la página*/
+    color: var(--blanco); /*Cambio el color a la letra*/
+    font-size: 2rem; /*Hago fuente más grande*/
+    font-family: Arial, Helvetica, sans-serif; /*Cambio tipo de letra*/
+    padding: 1rem;
+    /*appearance: none; Este código quita la flechita de seleccionar, pero a mí me gusta y la dejo*/
+
+}
+.formulario__submit {
+    background-color: var(--secundario); /*Cambio color de fondo*/
+    border: none; /*Quito el borde al botón que trae por defecto*/
+    font-size: 2rem; /*Cambio tamaño del texto*/
+    font-family: var(--fuentePrincipal); /*Cambio tipo de letra*/
+    padding: 2rem; 
+    transition: background-color .3s ease-in-out; /*Agrego transición para que el efecto del cambio de color sea transitivo, y que tarde 3 segundos en hacerlo*/
+    grid-column: 1 / 3; /*Para que el botón se alargue de la fila 1 a la 3*/
+}
+/*Al dar estilos a un botón del tipo submit, la manita que trae por defecto cuando se le pasa el cursor por encima, la pierde, entonces:*/
+.formulario__submit:hover {
+    cursor: pointer; /*Con esta opción, recuperamos la manita al hacer hover en el botón*/
+    background-color: var(--secundarioOscuro); /*Cambio de color para efecto al hacer hover*/
+}

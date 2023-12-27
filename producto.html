@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> FrontEnd Store</title>
+        <link rel="icon" href="./img/logo.png" type="image/png"> <!--Icono de la pestaña del navegador-->
+        <link rel="stylesheet" href="css/normalize.css"> <!--Enlazar archivo normalize para normalizar vista entre navegadores-->
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"> <!--Para linkar tipo letra de google font-->
+        <link rel="stylesheet" href="css/style.css"> <!--Enlazar archivo estilos propios-->
+    </head>
+    <body>
+        <header class="header"> <!--Se establece header donde irá la cabecera de la web-->
+            <a href="index.html"> <!--Se establece un enlace y dentro, una imagen, que será el logo de la web, para que cuando se pulse,
+                                    nos lleve a la página principal/home de la página-->
+                <img class="header__logo" src="./img/logo.png" alt="Logotipo">
+            </a>
+        </header>
+
+        <nav class="navegacion"> <!--Se crea barra de navegación-->
+            <a class="navegacion__enlace navegacion__enlace--activo" href="index.html">Tienda</a> <!--Botón de navegación Tienda, que al puslarlo, nos llevará a la sección tienda de la web-->
+            <a class="navegacion__enlace" href="nosotros.html">Nosotros</a> <!--Botón de navegación Nosotros, que al pulsarlo, nos llevará a la sección nosotros de la web-->
+        </nav>
+
+        <main class="contenedor"> <!--Asigno al main la clase contendor creada anteriormente-->
+            <h1>React JS</h1>
+
+            <div class="camisa">
+                <img class="camisa__imagen" src="img/3.jpg" alt="Imagen del producto">
+
+                <div class="camisa__contenido">
+                    <p>
+                        Praesent at condimentum mi. Nunc ultricies nisl tellus, sed vulputate lorem scelerisque vitae. Fusce sed purus nisi. 
+                        Fusce a consectetur turpis. Ut porta nunc massa, ac gravida nisi accumsan eget. In vel leo eu ipsum. Nisi purus sed.
+                        Praesent at condimentum mi. Nunc ultricies nisl tellus, sed vulputate
+                    </p>
+
+                    <form class="formulario">
+                        <select class="formulario__campo">
+                            <option disabled selected>-- Seleccionar talla --</option> <!--Con el atributo disabled le indico que no puede ser seleccionado y con el 
+                                                                                        atributo selected, le indico que sea la opción que salga por defecto. El resumen 
+                                                                                        es que es la que saldrá, pero no se podrá seleccionar-->
+                            <option>S - Pequeña</option>
+                            <option>M - Mediana</option>
+                            <option>L - Grande</option>
+                        </select> <!--Cierre .formulario__campo-->
+                        <input class="formulario__campo" type="number" placeholder="Cantidad" min="1"> <!--con el atributo number me aseguro que solo se puedan introducir números y con el atributo
+                                                                             min me aseguro que el mínimo número que se pueda elegir sea uno, ya que si no se pone esto, podrá
+                                                                             elegir números negativos-->
+                        <input class="formulario__submit" type="submit" value="Agregar al carrito">
+                    </form> <!--Cierre .formulario-->
+                </div> <!--Cierre .camisa__contenido-->
+            </div> <!--.camisa-->
+        </main>
+
+        <footer class="footer">
+            <p class="footer__texto">Front End Store - Todos los derechos reservados 2024.</p>
+        </footer>
+    </body>
+</html>
